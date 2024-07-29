@@ -1,17 +1,16 @@
+<button class="language-button"(click)="toggleLanguage()">{{ currentLanguage === 'english' ? 'ES' : 'EN' }}</button> 
 <nav>
-<div>
-<img src="" alt="logo">
-</div>
-<ul>
-<li><a href="">HOME</a></li>
-<li>|</li>
-<li><a href="">ABOUT ME</a></li>
-<li>|</li>
-<li><a href="">PORTFOLIO</a></li>
-<li>|</li>
-<li><a href="">SERVICES</a></li>
-</ul>
-<button>
-CONTACT
-</button>
+  <div>
+    <img src="assets/logo.png" alt="logo" />
+  </div>
+  <ul>
+    <li><a href="">{{ currentLanguage === 'english' ? 'HOME' : 'INICIO' }}</a></li>
+    <li>|</li>
+    <li><a href="">{{ currentLanguage === 'english' ? 'ABOUT ME' : 'SOBRE MI' }}</a></li>
+    <li>|</li>
+    <li><a href="">{{ currentLanguage === 'english' ? 'PORTFOLIO' : 'PORTAFOLIO' }}</a></li>
+    <li>|</li>
+    <li><a href="">{{ currentLanguage === 'english' ? 'SERVICES' : 'SERVICIOS' }}</a></li>
+  </ul>
+  <button>{{ currentLanguage === 'english' ? 'CONTACT' : 'CONTACTO' }}</button>
 </nav>

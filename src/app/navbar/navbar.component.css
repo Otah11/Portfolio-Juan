@@ -1,30 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:host{
-    width: 100vw;
+:host {
+   
     height: 65px;
+    color: whitesmoke;
+    display: block;
 }
 
-nav{
-    margin-top: 2em ;
+nav {
+    margin-top: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-div{
+div {
     margin-right: 2%;
 }
 
-ul{
+img {
+    filter: invert(59%) sepia(90%) saturate(319%) hue-rotate(134deg) brightness(90%) contrast(92%);
+    width: 80px;
+    height: auto;
+}
+
+ul {
     display: flex;
-    
+
 }
 
 
 
-ul li{
+ul li {
     list-style: none;
     padding: 1em;
     font-size: 24px;
@@ -32,7 +40,7 @@ ul li{
 
 }
 
-ul li a{
+ul li a {
     font-size: 16px;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
@@ -40,14 +48,29 @@ ul li a{
 
 }
 
-button{
-    background: linear-gradient(to right, #52AADA, #4729BF) ;
+button {
+    background: transparent;
     padding: 10px 30px 9px 30px;
-    border: none;
+    border: 2px solid #38a3a5;
     border-radius: 10px;
     color: whitesmoke;
     font-family: "Poppins", sans-serif;
     margin-left: 2%;
     font-size: 16px;
     text-align: center;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+button:hover {
+    background: #38a3a5;
+}
+
+.language-button{
+    margin-top: 10px;
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    padding: 6px 20px 5px 20px;
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../../private/laguage.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,5 +9,16 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  currentLanguage: 'spanish' | 'english';
 
+  constructor(private languageService: LanguageService) {
+    this.currentLanguage = this.languageService.getLanguage();
+    this.languageService.language$.subscribe(language => {
+      this.currentLanguage = language;
+    });
+  }
+
+  toggleLanguage() {
+    this.languageService.toggleLanguage();
+  }
 }
