@@ -43,7 +43,10 @@ const data: Data = {
                 contact: "CONTACTO",
                 cv: "CV"
             }
-        }
+        },
+        // portfolio: {
+
+        // }
     },
     english: {
         navbar: [
