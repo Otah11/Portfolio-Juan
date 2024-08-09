@@ -1,16 +1,14 @@
-<button class="language-button"(click)="toggleLanguage()">{{ currentLanguage === 'english' ? 'ES' : 'EN' }}</button> 
+<button class="language-button" (click)="toggleLanguage()">
+  {{ content.languageButton }}
+</button>
 <nav>
   <div>
     <img src="assets/logo.png" alt="logo" />
   </div>
   <ul>
-    <li><a href="">{{ currentLanguage === 'english' ? 'HOME' : 'INICIO' }}</a></li>
-    <li>|</li>
-    <li><a href="">{{ currentLanguage === 'english' ? 'ABOUT ME' : 'SOBRE MI' }}</a></li>
-    <li>|</li>
-    <li><a href="">{{ currentLanguage === 'english' ? 'PORTFOLIO' : 'PORTAFOLIO' }}</a></li>
-    <li>|</li>
-    <li><a href="">{{ currentLanguage === 'english' ? 'SERVICES' : 'SERVICIOS' }}</a></li>
+    <li *ngFor="let item of content.navbar">
+      <a [href]="'#' + item.link">{{ item.title }}</a>
+    </li>
   </ul>
-  <button>{{ currentLanguage === 'english' ? 'CONTACT' : 'CONTACTO' }}</button>
+  <button>{{ content.contactButton }}</button>
 </nav>

@@ -7,25 +7,33 @@ interface AboutMeContent {
     };
 }
 
+interface NavbarItem {
+    title: string;
+    link: string;
+}
+
 interface Data {
     spanish: {
-        navbar: string[];
+        navbar: NavbarItem[];
         aboutme: AboutMeContent;
+        languageButton: string;
+        contactButton: string;
     };
     english: {
-        navbar: string[];
+        navbar: NavbarItem[];
         aboutme: AboutMeContent;
+        languageButton: string;
+        contactButton: string;
     };
 }
 
 const data: Data = {
     spanish: {
         navbar: [
-            "INICIO",
-            "SOBRE MI",
-            "PORTFOLIO",
-            "SERVICIOS",
-            "CONTACTO",
+            { title: "INICIO", link: "home" },
+            { title: "SOBRE MI", link: "aboutme" },
+            { title: "PORTFOLIO", link: "portfolio" },
+            { title: "SERVICIOS", link: "services" },
         ],
         aboutme: {
             heading: "SOBRE MI",
@@ -44,17 +52,15 @@ const data: Data = {
                 cv: "CV"
             }
         },
-        // portfolio: {
-
-        // }
+        languageButton: "EN",
+        contactButton: "CONTACTO"
     },
     english: {
         navbar: [
-            "HOME",
-            "ABOUT ME",
-            "PORTFOLIO",
-            "SERVICES",
-            "CONTACT",
+            { title: "HOME", link: "home" },
+            { title: "ABOUT ME", link: "aboutme" },
+            { title: "PORTFOLIO", link: "portfolio" },
+            { title: "SERVICES", link: "services" },
         ],
         aboutme: {
             heading: "ABOUT ME",
@@ -72,7 +78,9 @@ const data: Data = {
                 contact: "CONTACT",
                 cv: "RESUME"
             }
-        }
+        },
+        languageButton: "ES",
+        contactButton: "CONTACT"
     }
 };
 

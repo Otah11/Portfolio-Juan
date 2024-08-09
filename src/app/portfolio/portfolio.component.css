@@ -16,7 +16,7 @@
 
 .portfolio-section h2 {
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
     margin-top: 20px;
     font-size: 32px;
 }
@@ -27,28 +27,18 @@
     justify-content: center;
 }
 
-.portfolio-project1 {
-    margin: 1rem;
-}
-
-.portfolio-project2 {
-    margin: 1rem;
-}
-
-.portfolio-project3 {
-    margin: 1rem;
-}
-
 .portfolio-photo {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin: 2rem;  
 }
 
 .portfolio-photo img {
     border-radius: 10px;
     width: 400px;
-    height: auto;
+    height: 220px;
     display: block;
     margin-bottom: 1rem;
 }
@@ -65,7 +55,7 @@
 }
 
 .portfolio-text {
-    margin-left: 20px; 
+    margin-left: 70px;  
     text-align: left;
 }
 
@@ -77,4 +67,34 @@
 .portfolio-text p {
     margin: 0;
     font-size: 14px;
+}
+
+.portfolio-text-reverse {
+    margin-right: 70px;  
+    text-align: right;
+}
+
+.portfolio-text-reverse h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.portfolio-text-reverse p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.portfolio-photo.reverse {
+    flex-direction: row-reverse;
+}
+
+.portfolio-photo.reverse .photo-border {
+    left: auto;
+    right: -25px;
+}
+
+.portfolio-text.reverse {
+    margin-left: 0;
+    margin-right: 40px; 
+    text-align: right;
 }
